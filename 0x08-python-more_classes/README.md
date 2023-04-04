@@ -1,2 +1,2 @@
 more classes and objects
-is amzing
+is amazing
