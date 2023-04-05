@@ -5,6 +5,7 @@
 class Rectangle:
     """ Init Class width set 0 and height set 0"""
     number_of_instances = 0
+    print_symbol = #
 
     def __init__(self, width=0, height=0):
         """ Constructor """
@@ -68,6 +69,6 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
     def __del__(self):
-        """ Action when object is deleted """
-        Rectangle.number_of_instances -= 1
+        """prints a string when an instance has been deleted"""
         print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
