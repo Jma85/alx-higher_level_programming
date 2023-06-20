@@ -16,7 +16,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    jay_city = session.query(State, City).filter(State.id == City.state_id).all()
+    jay_city = session.query(
+        State, City).filter(
+        State.id == City.state_id).all()
 
     for state, city in jay_city:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
