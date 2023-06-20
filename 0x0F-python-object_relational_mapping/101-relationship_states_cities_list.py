@@ -19,7 +19,8 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    jay_states = session.query(State).outerjoin(City).order_by(State.id, City.id).all()
+    jay_states = session.query(State).outerjoin(
+        City).order_by(State.id, City.id).all()
 
     for state in jay_states:
         print("{}: {}".format(state.id, state.name))
